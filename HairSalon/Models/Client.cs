@@ -38,9 +38,9 @@ namespace HairSalon.Models
             return _id;
         }
 
-        public override bool Equals(System.Object otherItem)
+        public override bool Equals(System.Object otherClient)
         {
-            if (!(otherItem is Client))
+            if (!(otherClient is Client))
             {
                 return false;
             }
