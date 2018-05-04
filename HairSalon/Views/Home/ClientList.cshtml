@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Hair Salon</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h3> Stylists: </h3>
+        <br>
+        <br>
+        foreach(var client in Model)
+        {
+          <li>@client.GetStylistId().GetStylistName()</li>
+        }
+        <p><a href="/stylist/client/new">Add Client for this Stylist.</a></p>
+      </div>
+    </div>
+  </body>
+</html>

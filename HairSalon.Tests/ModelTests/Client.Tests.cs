@@ -29,5 +29,14 @@ namespace HairSalon.Tests
 
             Assert.AreEqual("clientOne", finalResult);
         }
+
+        [TestMethod]
+        public void Search_for_Client_via_StylistID()
+        {
+            Client result = Client.Find(3);
+            int finalResult = result.GetStylistId();
+
+            Assert.AreEqual(2, finalResult);
+        }
     }
 }
