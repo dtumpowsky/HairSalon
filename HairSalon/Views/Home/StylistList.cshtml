@@ -10,13 +10,16 @@
         <h3> Stylists: </h3>
         <br>
         <br>
-        foreach(var stylist in Model)
+        <ul>
+        @foreach(var stylist in Model)
         {
-          <li>@stylist.GetStylistName()</li>
-          <p><a href="/stylist/client">See Clients</a>  |  <a href="/stylist/client/new">Add Clients</a></p>
-            <br>
 
+          <li>@stylist.GetStylistName() <br>
+          <p><a href="/stylist/client">See Clients</a>  |  <a href="/stylist/client/new">Add Clients</a></p>
+          </li>
+          
         }
+        </ul>
         <p><a href="/stylist/new">Add New Stylist to System.</a></p>
       </div>
     </div>

@@ -7,14 +7,15 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h3> Stylists: </h3>
+        <h3> Add Stylist: </h3>
         <br>
         <br>
-        @foreach(var client in Model)
-        {
-          <li>@client.GetStylistId().GetStylistName()</li>
-        }
-        <p><a href="/stylist/client/new">Add Client for this Stylist.</a></p>
+        <form action="/contact" method="post">
+          <label for="stylist-full-name">Stylist's Full Name:</label>
+          <input id="stylist-full-name" name="stylist-full-name" type="text">
+
+          <button type="submit">Add Stylist</button>
+        </form>
       </div>
     </div>
   </body>

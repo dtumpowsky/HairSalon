@@ -24,18 +24,20 @@ namespace HairSalon.Controllers
 
 //boostrap form to input stylist info
         [HttpGet("/stylist/add")]
-        public ActionResult AddStylist()
+        public ActionResult NewStylist()
         {
             return View();
         }
 
 //gathers stylist input from boostrap form
         [HttpPost("/stylist/add")]
-        public ActionResult AddStylist()
+        public ActionResult CreateStylist()
         {
             Stylist newStylist = new Stylist(Request.Form["stylist-full-name"]);
 
-            List <Stylist> allStyists = Stylist.GetAll();
+            newStylist.Save();
+            List <Stylist> allStylists = Stylist.GetAll();
+
             return View("StylistList", allStylists);
         }
 
@@ -43,23 +45,29 @@ namespace HairSalon.Controllers
         [HttpGet("/stylist/client")]
         public ActionResult ClientList()
         {
-            List <Client> allClients = ClientList.GetStylistId().GetAll();
+            List <Client> allClients = Client.GetAll();
             return View();
         }
 
 //boostrap form to input client info to specific stylist
         [HttpGet("/stylist/client/new")]
-        public ActionResult AddClient()
+        public ActionResult NewClient()
         {
             return View();
         }
 //gather input to add to specific stylist list
 
+//Errors with this route
         [HttpPost("/stylist/client/new")]
         public ActionResult AddClient()
         {
-            Client newClient = new Client(Request.Form["client-full-name"]);
+          Client newClientID = new List <Client>this.GetClientId();
+          int newStylistSelection = int.Parse(Request.Form["stylist-list"]);
+          string newClientName = Request.Form["client-full-list"];
+          Client newClient = new Client(newClientId, newStylistSelection, newClientName);
 
-            List <Client> allClients = Client.GetAll();
-            return View("StylistLists");
+          newClient.Save();
+          return View("StylistList");
         }
+    }
+}
