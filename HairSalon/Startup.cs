@@ -4,8 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HairSalon
+namespace BestRest
 {
+    public static class DBConfiguration
+    {
+          public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=david_tumpowsky_hair_salon;";
+    }
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -25,7 +29,7 @@ namespace HairSalon
 
         public void Configure(IApplicationBuilder app)
         {
-          app.UseDeveloperExceptionPage(); // for debugging
+            app.UseDeveloperExceptionPage();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -34,12 +38,8 @@ namespace HairSalon
             });
             app.Run(async (context) =>
             {
-                    await context.Response.WriteAsync("World Data Apps!");
+                await context.Response.WriteAsync("404 Not Found");
             });
         }
-    }
-    public static class DBConfiguration
-    {
-      public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=;";
     }
 }
