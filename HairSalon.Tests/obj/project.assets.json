@@ -3986,7 +3986,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "hairsalon/1.0.0": {
+      "HairSalon/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
@@ -3997,10 +3997,10 @@
           "MySqlConnector": "0.40.3"
         },
         "compile": {
-          "bin/placeholder/hairsalon.dll": {}
+          "bin/placeholder/HairSalon.dll": {}
         },
         "runtime": {
-          "bin/placeholder/hairsalon.dll": {}
+          "bin/placeholder/HairSalon.dll": {}
         }
       }
     }
@@ -10700,19 +10700,20 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "hairsalon/1.0.0": {
+    "HairSalon/1.0.0": {
       "type": "project",
-      "path": "../HairSalon/hairsalon.csproj",
-      "msbuildProject": "../HairSalon/hairsalon.csproj"
+      "path": "../HairSalon/HairSalon.csproj",
+      "msbuildProject": "../HairSalon/HairSalon.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "HairSalon >= 1.0.0",
       "MSTest.TestAdapter >= 1.1.11",
       "MSTest.TestFramework >= 1.1.11",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
       "Microsoft.NETCore.App >= 1.1.2",
-      "hairsalon >= 1.0.0"
+      "MySqlConnector >= 0.40.3"
     ]
   },
   "packageFolders": {
@@ -10721,11 +10722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dtumpowsky/Desktop/code/HairSalon.Solution/HairSalon.Tests/hairsalon.tests.csproj",
-      "projectName": "hairsalon.tests",
-      "projectPath": "/Users/dtumpowsky/Desktop/code/HairSalon.Solution/HairSalon.Tests/hairsalon.tests.csproj",
+      "projectUniqueName": "/Users/dtumpowsky/Desktop/HairSalon.Solution/HairSalon.Tests/HairSalon.tests.csproj",
+      "projectName": "HairSalon.tests",
+      "projectPath": "/Users/dtumpowsky/Desktop/HairSalon.Solution/HairSalon.Tests/HairSalon.tests.csproj",
       "packagesPath": "/Users/dtumpowsky/.nuget/packages/",
-      "outputPath": "/Users/dtumpowsky/Desktop/code/HairSalon.Solution/HairSalon.Tests/obj/",
+      "outputPath": "/Users/dtumpowsky/Desktop/HairSalon.Solution/HairSalon.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dtumpowsky/.nuget/NuGet/NuGet.Config"
@@ -10739,8 +10740,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "/Users/dtumpowsky/Desktop/code/HairSalon.Solution/HairSalon/hairsalon.csproj": {
-              "projectPath": "/Users/dtumpowsky/Desktop/code/HairSalon.Solution/HairSalon/hairsalon.csproj"
+            "/Users/dtumpowsky/Desktop/HairSalon.Solution/HairSalon/HairSalon.csproj": {
+              "projectPath": "/Users/dtumpowsky/Desktop/HairSalon.Solution/HairSalon/HairSalon.csproj"
             }
           }
         }
@@ -10765,6 +10766,10 @@
           "MSTest.TestFramework": {
             "target": "Package",
             "version": "1.1.11"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "0.40.3"
           }
         }
       }
